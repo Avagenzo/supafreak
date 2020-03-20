@@ -1,1 +1,1 @@
-# supafreak
+# Data Science for supafreaks
