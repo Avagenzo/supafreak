@@ -1,3 +1,7 @@
+import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, ROW
+
 class HelloWorld(toga.App):
     def startup(self):
         main_box = toga.Box(style=Pack(direction=COLUMN))
@@ -27,3 +31,7 @@ class HelloWorld(toga.App):
 
     def say_hello(self, widget):
         print("Hello", self.name_input.value)
+
+
+def main():
+    return HelloWorld()
