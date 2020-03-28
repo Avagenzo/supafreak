@@ -144,3 +144,6 @@ static
 
 #idea stuff
 .idea/
+
+#gulb trash
+.DS_Store
