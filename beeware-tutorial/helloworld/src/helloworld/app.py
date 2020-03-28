@@ -7,7 +7,7 @@ class HelloWorld(toga.App):
         main_box = toga.Box(style=Pack(direction=COLUMN))
 
         name_label = toga.Label(
-            'Your name: ',
+            'Your name pls: ',
             style=Pack(padding=(0, 5))
         )
         self.name_input = toga.TextInput(style=Pack(flex=1))
@@ -30,7 +30,15 @@ class HelloWorld(toga.App):
         self.main_window.show()
 
     def say_hello(self, widget):
-        print("Hello", self.name_input.value)
+        if self.name_input.value:
+            name = self.name_input.value
+        else:
+            name = 'stranger'
+
+        self.main_window.info_dialog(
+            'Hi there!',
+            "Hello, {}".format(name)
+        )
 
 
 def main():
