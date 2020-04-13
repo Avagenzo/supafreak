@@ -1,0 +1,45 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "Supafreak Newsticker"
+bundle = "com.sf.newsticker"
+version = "0.0.1"
+url = "https://newsticker.sf.com/sfnewsticker"
+license = "BSD license"
+author = 'Johann and Alex'
+author_email = "johann@newsticker.sf.com"
+
+[tool.briefcase.app.sfnewsticker]
+formal_name = "Supafreak Newsticker"
+description = "Custom Newsticker App with Beeware Tools"
+icon = "src/sfnewsticker/resources/sfnewsticker"
+sources = ['src/sfnewsticker']
+requires = []
+
+
+[tool.briefcase.app.sfnewsticker.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.sfnewsticker.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.sfnewsticker.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.sfnewsticker.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.sfnewsticker.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
