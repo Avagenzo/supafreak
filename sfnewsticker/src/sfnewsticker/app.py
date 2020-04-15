@@ -10,7 +10,7 @@ from toga.style.pack import Pack, COLUMN
 
 def build(app):
     main_box = toga.Box(style=Pack(direction=COLUMN, padding_top=50))
-    settings_icon = "icons/baseline_settings_white_48dp.png"
+    settings_icon = "icons/baseline_settings_black_48dp.png"
     search_icon = "icons/baseline_search_black_48dp.png"
 
     toolbar_grp: Group = toga.Group('Toolbar')
@@ -32,8 +32,20 @@ def build(app):
         group=toolbar_grp
     )
 
-    #app.commands.add(settings_cmd, search_cmd)
+    button = toga.Button(
+        'Say Hello!',
+        on_press=say_hello,
+        style=Pack(padding=50)
+    )
+
+    main_box.add(button)
+
+    # app.main_window = toga.MainWindow()
+    # app.main_window.content = main_box
     app.main_window.toolbar.add(search_cmd, settings_cmd)
+    # app.main_window.show()
+
+    # app.commands.add(settings_cmd, search_cmd)
 
     return main_box
 
@@ -44,6 +56,10 @@ def settings_action(widget):
 
 def search_action(widget):
     print("Search")
+
+
+def say_hello(widget):
+    print("Hello")
 
 
 def main():
