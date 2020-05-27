@@ -15,22 +15,22 @@ def build(app):
 
     toolbar_grp: Group = toga.Group('Toolbar')
 
-    settings_cmd = toga.Command(
-        settings_action,
-        label='Settings',
-        tooltip='Change Settings',
-        # shortcut=toga.Key.MOD_1 + 'k',
-        icon=settings_icon,
-        group=toolbar_grp
-    )
-
-    search_cmd = toga.Command(
-        search_action,
-        label='Search',
-        tooltip='Search',
-        icon=search_icon,
-        group=toolbar_grp
-    )
+    # settings_cmd = toga.Command(
+    #     settings_action,
+    #     label='Settings',
+    #     tooltip='Change Settings',
+    #     # shortcut=toga.Key.MOD_1 + 'k',
+    #     icon=settings_icon,
+    #     group=toolbar_grp
+    # )
+    #
+    # search_cmd = toga.Command(
+    #     search_action,
+    #     label='Search',
+    #     tooltip='Search',
+    #     icon=search_icon,
+    #     group=toolbar_grp
+    # )
 
     button = toga.Button(
         'Say Hello!',
@@ -42,7 +42,7 @@ def build(app):
 
     # app.main_window = toga.MainWindow()
     # app.main_window.content = main_box
-    app.main_window.toolbar.add(search_cmd, settings_cmd)
+    # app.main_window.toolbar.add(search_cmd, settings_cmd)
     # app.main_window.show()
 
     # app.commands.add(settings_cmd, search_cmd)
